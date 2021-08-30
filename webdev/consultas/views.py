@@ -5,4 +5,4 @@ from django.urls import reverse
 # Create your views here.
 
 def home(request):
-    return HttpResponse("home consultas")
+    return render(request, 'consultas/home.html')

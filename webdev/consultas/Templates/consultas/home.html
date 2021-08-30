@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de consultas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md">
+                <h1 class="mt-5">Consultas</h1>
+                <form action="{% url 'consultas:home' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Forceça o tiket para consulta" aria-label="Forceça o tiket para consulta" aria-describedby="button-addon2" name="input-ticket">
+                        <button type="submit" class="btn btn-primary" id="button-addon2">Enviar</button>
+                      </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
